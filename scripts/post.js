@@ -41,20 +41,40 @@ editLink.textContent = "✏️ Edit Post";
 document.getElementById("postContainer").appendChild(editLink);
 
 // Handle deletion of the post
-deleteBtn.addEventListener("click", () => {
-  const confirmed = confirm("Are you sure you want to delete this post?");
-  if (!confirmed) return;
+const confirmModal = document.getElementById('confirmModal');
+const confirmDelete = document.getElementById('confirmDelete');
+const cancelDelete = document.getElementById('cancelDelete');
+const toast = document.getElementById('toast');
 
-  // Sends a delete request to the backend for that specific post
+//Show modal when delete is clicked
+deleteBtn.addEventListener("click", () => {
+  confirmModal.classList.remove("hidden");
+});
+
+//Cancel deletion
+cancelDelete.addEventListener("click", () => {
+  confirmModal.classList.add("hidden");
+});
+
+//Confirm deletion
+confirmDelete.addEventListener("click", () => {
   fetch(`${BASE_URL}/posts/${postId}`, {
     method: "DELETE"
   })
     .then(res => res.json())
     .then(data => {
-      alert(data.message || "Post deleted.");
-      window.location.href = "index.html";
+      confirmModal.classList.add("hidden");
+      toast.classList.remove("hidden");
+
+      setTimeout(() => {
+        toast.classList.add("hidden");
+        window.location.href = "index.html";
+      }, 2000);
     })
     .catch(err => {
       alert("Failed to delete post.");
     });
 });
+
+
+ 
