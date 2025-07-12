@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables (if ever added)
+.env
+
+# Node modules (if you add a build step later)
+node_modules/
+
+# Build folders (if using tools like Webpack/Vite in the future)
+dist/
+build/

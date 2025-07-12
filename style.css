@@ -1,0 +1,83 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: #eee;
+  padding: 20px;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+.post-preview {
+  background: #222;
+  border: 1px solid #333;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+
+form {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #222;
+  color: #eee;
+}
+
+button {
+  padding: 10px 20px;
+  background: #0ff;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0cc;
+}
+
+
+
+#postContainer {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 700px;
+}
+
+#postContainer h1 {
+  font-size: 2rem;
+  color: #0ff;
+}
+
+#deleteBtn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#deleteBtn:hover {
+  background: darkred;
+}
+
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Blog Post</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Edit Blog Post</h1>
+  <form id="editForm">
+    <label>Title:</label><br />
+    <input type="text" id="title" required /><br /><br />
+
+    <label>Content:</label><br />
+    <textarea id="content" rows="6" required></textarea><br /><br />
+
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <p id="statusMsg"></p>
+  <a href="index.html">← Back to Home</a>
+
+  <script src="scripts/edit.js"></script>
+</body>
+</html>
